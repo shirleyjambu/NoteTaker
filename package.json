@@ -1,0 +1,26 @@
+{
+  "name": "notetaker",
+  "version": "1.0.0",
+  "description": "In this activity you'll build a Node, Express, and MySQL powered note-taking application. The user will have the ability to create, read, and delete notes from a MySQL database.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shirleyjambu/NoteTaker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shirleyjambu/NoteTaker/issues"
+  },
+  "homepage": "https://github.com/shirleyjambu/NoteTaker#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "moment": "^2.24.0",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7"
+  }
+}
