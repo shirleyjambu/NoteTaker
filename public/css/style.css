@@ -1,0 +1,25 @@
+/* Notes.html*/
+.header{
+  line-height: 50px;
+}
+.note{
+  width: 400px;
+}
+
+.note-header{
+  background-color: #FFF;
+}
+.note-title{
+  border: none;
+  outline:none;
+  font-size:2em;
+}
+.note-body{
+
+}
+.note-text{
+  border: none;
+  outline:none;
+  height: 250px;
+  width: 350px;
+}
