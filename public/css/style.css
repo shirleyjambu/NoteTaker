@@ -14,12 +14,26 @@
   outline:none;
   font-size:2em;
 }
-.note-body{
 
-}
 .note-text{
   border: none;
   outline:none;
   height: 250px;
   width: 350px;
+}
+
+.fa-save{
+  padding: 5px;
+  color:green;
+  font-size: 1.5rem;
+}
+
+.fa-edit{
+  padding: 5px;
+  color:blue;
+}
+
+.fa-trash-alt{
+  padding: 5px;
+  color:red;
 }

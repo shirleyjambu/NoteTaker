@@ -20,11 +20,12 @@
   <div class="col-6">
       <div class="card note">
           <div class="card-header note-header">
-            <input type="text" id="note_title" class="note-title" placeholder="Note Title">
+            <input type="hidden" id="note_id">
+            <input type="text" id="note_title" class="note-title" placeholder="Note Title" maxlength="50">
           </div>
           <div class="card-body note-body">
-             <textarea id="note_text" class="note-text" placeholder="Note"></textarea>
-             <i class="fa fa-save"></i>
+             <textarea id="note_text" class="note-text" placeholder="Note" maxlength="250"></textarea>
+             <i class="fa fa-save"></i>&nbsp;&nbsp;<span id="message"></span>
           </div>
       </div>
   </div>
