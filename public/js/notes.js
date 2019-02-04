@@ -1,6 +1,6 @@
 const COLORS = {
-  1 : 'pink',
-  2 : 'palegreen',
+  1 : 'lavender',
+  2 : 'blanchedalmond',
   3 : 'lightcyan',
   4 : 'whitesmoke',
   5 : 'lightgoldenrodyellow'
@@ -30,7 +30,8 @@ const displayNotes = (noteData) => {
 };
 
 const getCard =(dbNote)=>{
-  let strDt = moment(dbNote.created_dt,'YYYY-MM-DD HH:mm:ss').format("Do MMM[']YY[, ]HH:mm a");
+  let date = dbNote.modified_dt?dbNote.modified_dt:dbNote.created_dt;
+  let strDt = moment(date,'YYYY-MM-DD HH:mm:ss').format("Do MMM[']YY[, ]h:mm a");
   
   $card = $("<div class='card'>");
     
@@ -115,6 +116,10 @@ const setNote = (noteData) =>{
   $("#note_title").val(noteData.note_title);
   $("#note_text").val(noteData.note_text);
   $("#note_id").val(noteData.note_id);
+
+  let color_id = noteData.color_id;
+  let color = COLORS[color_id];
+  colorCard(color, color_id);
 }
 
 const clearNote = () => {

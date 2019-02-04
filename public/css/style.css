@@ -67,8 +67,8 @@ a:hover{
 
 /* Colors for color dots*/
 
-.red{
-  color:red;
+.purple{
+  color:mediumslateblue;
   font-size: 1.25rem;
   padding: 5px;
 }
@@ -79,8 +79,8 @@ a:hover{
   padding: 5px;
 }
 
-.green{
-  color: lightseagreen;
+.orange{
+  color: darkorange;
   font-size: 1.25rem;
   padding: 5px;
 }
@@ -106,17 +106,14 @@ a:hover{
   background-color:lightgoldenrodyellow;
 }
 
-.pink{
-  background-color:pink;
+.lavender{
+  background-color:lavender;
 }
 
 .lightcyan{
   background-color:lightcyan;
 }
 
-.palegreen{
-  background-color:palegreen;
+.blanchedalmond{
+  background-color:blanchedalmond;
 }
-
-
-

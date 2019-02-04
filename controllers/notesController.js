@@ -2,7 +2,7 @@ const db = require("./../db/connection");
 
 module.exports={
   getAllNotes : function(req, res){
-    db.query("select * from notes",function(err,dbNotesData){
+    db.query("SELECT * FROM notes order by created_dt desc,-modified_dt desc",function(err,dbNotesData){
       if(err) res.json(err);
       //console.log(dbNotesData);
       res.json(dbNotesData);
@@ -28,12 +28,12 @@ module.exports={
     });
   },
   editNote : function(req,res){
-    let query = db.query("UPDATE notes SET ? WHERE ?", [req.body, {note_id:req.params.note_id}], function(err, dbNote){
+    let query = db.query("UPDATE notes SET modified_dt = CURRENT_TIMESTAMP, ? WHERE ?", [req.body, {note_id:req.params.note_id}], function(err, dbNote){
       if(err) res.json(err);
       
       res.json(dbNote);
     });
-    //console.log(query.sql);
+    console.log(query.sql);
   }
 
 }
