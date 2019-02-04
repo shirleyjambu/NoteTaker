@@ -28,12 +28,13 @@ module.exports={
     });
   },
   editNote : function(req,res){
-    let query = db.query("UPDATE notes SET modified_dt = CURRENT_TIMESTAMP, ? WHERE ?", [req.body, {note_id:req.params.note_id}], function(err, dbNote){
+    //let query = 
+    db.query("UPDATE notes SET modified_dt = CURRENT_TIMESTAMP, ? WHERE ?", [req.body, {note_id:req.params.note_id}], function(err, dbNote){
       if(err) res.json(err);
       
       res.json(dbNote);
     });
-    console.log(query.sql);
+    //console.log(query.sql);
   }
 
 }
