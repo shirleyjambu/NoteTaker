@@ -4,14 +4,14 @@ module.exports={
   getAllNotes : function(req, res){
     db.query("select * from notes",function(err,dbNotesData){
       if(err) res.json(err);
-      console.log(dbNotesData);
+      //console.log(dbNotesData);
       res.json(dbNotesData);
     });
   },
   getNote : function(req, res){
     db.query("SELECT * FROM notes WHERE ?",[req.query],function(err,dbNotesData){
       if(err) res.json(err);
-      console.log(dbNotesData);
+      //console.log(dbNotesData);
       res.json(dbNotesData);
     });
   },
@@ -33,7 +33,7 @@ module.exports={
       
       res.json(dbNote);
     });
-    console.log(query.sql);
+    //console.log(query.sql);
   }
 
 }

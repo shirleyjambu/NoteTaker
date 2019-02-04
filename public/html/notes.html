@@ -13,7 +13,7 @@
 <!-- Main Container-->
 <div class="container">
 <!--Header-->
-<div class="navbar header">My Own Note Taker</div>  
+<div class="navbar header">Take My Notes</div>  
 <!--Body-->
 <div class="d-flex">
   <!--Current Note-->
@@ -21,11 +21,18 @@
       <div class="card note">
           <div class="card-header note-header">
             <input type="hidden" id="note_id">
+            <input type="hidden" id="color_id" value="5">
             <input type="text" id="note_title" class="note-title" placeholder="Note Title" maxlength="50">
           </div>
           <div class="card-body note-body">
              <textarea id="note_text" class="note-text" placeholder="Note" maxlength="250"></textarea>
-             <i class="fa fa-save"></i>&nbsp;&nbsp;<span id="message"></span>
+             <i class="fa fa-circle red" title="Note Color" color='pink' color_id="1"></i>
+             <i class="fa fa-circle green" title="Note Color" color='palegreen' color_id="2"></i>
+             <i class="fa fa-circle blue" title="Note Color" color='lightcyan' color_id="3"></i>
+             <i class="fa fa-circle white" title="Note Color" color='whitesmoke' color_id="4"></i>
+             <i class="fa fa-circle yellow" title="Note Color" color='lightgoldenrodyellow' color_id="5"></i>
+             
+             <span style="float:right;"><span id="message"></span>&nbsp;&nbsp;<i class="fa fa-undo" title="Clear Note"></i><i class="fa fa-save" title="Save Note"></i></span>
           </div>
       </div>
   </div>
